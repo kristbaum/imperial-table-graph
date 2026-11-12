@@ -19,10 +19,10 @@ python3 scripts/qs_url.py batches/<base>.qs
 
 ## Building the `.skill` file
 
-A `.skill` file is a plain zip archive with `SKILL.md` and `references/` at the
-archive root. Rebuild it after editing either one:
+A `.skill` file is a plain zip archive with `SKILL.md`, `references/` and
+`scripts/` at the archive root. Rebuild it after editing any of them:
 
 ```sh
 rm -f imperial-table-graph.skill
-zip -r imperial-table-graph.skill SKILL.md references
+zip -r imperial-table-graph.skill SKILL.md references scripts -x '*__pycache__*'
 ```
